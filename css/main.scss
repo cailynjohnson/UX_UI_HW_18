@@ -177,7 +177,6 @@ img {
 .skills {
     background-color: #F6E8C6;
     text-align: center;
-    // padding: 5rem;
     padding: 20px 40px;
 }
 
@@ -189,7 +188,7 @@ img {
     height: 100%;
     margin: 0 auto;
     position: relative;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .skills-item {
@@ -199,10 +198,18 @@ img {
     margin: 3rem;
 }
 
+.icon-circle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .skills-icon {
     height: 50px;
     width: 50px;
-    justify-content: center;
+    position: relative;
+    left: 20%;
+    z-index: 100;
 }
 
 .pink-circle {

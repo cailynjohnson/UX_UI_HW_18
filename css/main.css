@@ -239,9 +239,9 @@ img {
   height: 100%;
   margin: 0 auto;
   position: relative;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .skills-item {
@@ -258,12 +258,25 @@ img {
   margin: 3rem;
 }
 
-.skills-icon {
-  height: 50px;
-  width: 50px;
+.icon-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.skills-icon {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  left: 20%;
+  z-index: 100;
 }
 
 .pink-circle {
