@@ -14,6 +14,11 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 img {
   width: 100%;
   border-radius: 5px;
@@ -197,6 +202,7 @@ img {
 
 .bio #display {
   font-size: 60px;
+  margin: 0px;
 }
 
 .photo {
@@ -269,6 +275,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 50px;
 }
 
 .skills-icon {
@@ -276,6 +283,7 @@ img {
   width: 50px;
   position: relative;
   left: 20%;
+  top: 20%;
   z-index: 100;
 }
 
@@ -328,7 +336,6 @@ footer ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0px 40px;
 }
 
 /* fonts  */
@@ -423,5 +430,6 @@ h4 {
   display: inline-block;
   vertical-align: top;
   padding: 5px;
+  font-size: 14px;
 }
 /*# sourceMappingURL=main.css.map */
