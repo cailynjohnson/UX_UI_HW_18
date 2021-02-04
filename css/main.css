@@ -1,3 +1,4 @@
+/* media query variables */
 body, html {
   height: 100%;
   width: 100%;
@@ -16,7 +17,7 @@ a {
 
 p {
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 img {
@@ -125,7 +126,7 @@ img {
 
 /* portfolio section */
 .portfolio-container {
-  width: 90%;
+  width: 80%;
   max-width: 120rem;
   height: 100%;
   margin: 0 auto;
@@ -142,11 +143,15 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 .portfolio-item:first-child {
   margin-top: 5rem;
+}
+
+.portfolio-item:last-child {
+  margin-bottom: 5rem;
 }
 
 .portfolio-img {
@@ -156,9 +161,9 @@ img {
 }
 
 .portfolio-description {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
 }
 
 .has-margin-right {
@@ -188,6 +193,15 @@ img {
           justify-content: center;
 }
 
+@media screen and (max-width: 600px) {
+  .about-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
 .bio {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -198,11 +212,27 @@ img {
           flex-direction: column;
   -ms-flex-line-pack: center;
       align-content: center;
+  margin-right: 5rem;
 }
 
 .bio #display {
   font-size: 60px;
   margin: 0px;
+}
+
+@media screen and (max-width: 600px) {
+  .bio #display {
+    font-size: 40px;
+    letter-spacing: 5px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .bio {
+    text-align: center;
+    margin-top: 3rem;
+    margin-right: 0rem;
+  }
 }
 
 .photo {
@@ -227,7 +257,7 @@ img {
 
 /* skills section */
 .skills {
-  background-color: #F6E8C6;
+  background-color: #FBF6E8;
   text-align: center;
   padding: 20px 40px;
 }
@@ -248,6 +278,15 @@ img {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+@media screen and (max-width: 600px) {
+  .skills-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .skills-item {
@@ -287,6 +326,14 @@ img {
   z-index: 100;
 }
 
+@media screen and (max-width: 600px) {
+  .skills-icon {
+    position: relative;
+    left: 8%;
+    top: 10%;
+  }
+}
+
 .pink-circle {
   height: 50px;
   width: 50px;
@@ -322,6 +369,17 @@ footer {
           align-items: center;
 }
 
+footer h4 {
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 600px) {
+  footer p {
+    margin: 0em 8em;
+    text-align: center;
+  }
+}
+
 footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -344,7 +402,6 @@ footer ul {
   font-size: 80px;
   font-weight: 500;
   letter-spacing: 10px;
-  line-height: 1.6;
 }
 
 h1 {
@@ -432,4 +489,6 @@ h4 {
   padding: 5px;
   font-size: 14px;
 }
+
+/* animations */
 /*# sourceMappingURL=main.css.map */

@@ -1,3 +1,7 @@
+/* media query variables */
+$breakpoint-mobile: 600px;
+
+
 body, html {
     height: 100%;
     width: 100%;
@@ -16,7 +20,7 @@ a {
 
 p {
     font-size: 14px;
-    line-height: 1.6
+    line-height: 1.5
 }
 
 img {
@@ -104,7 +108,7 @@ img {
 
 /* portfolio section */
 .portfolio-container {
-    width: 90%;
+    width: 80%;
     max-width: 120rem;
     height: 100%;
     margin: 0 auto;
@@ -115,11 +119,15 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 .portfolio-item:first-child {
     margin-top: 5rem;
+}
+
+.portfolio-item:last-child {
+    margin-bottom: 5rem;
 }
 
 .portfolio-img {
@@ -127,7 +135,7 @@ img {
 }
 
 .portfolio-description {
-    flex: 1;
+    flex: 1.5;
 }
 
 
@@ -150,6 +158,9 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    @media screen and (max-width: $breakpoint-mobile) {
+        flex-direction: column-reverse;
+    }
 }
 
 
@@ -157,10 +168,20 @@ img {
     display: flex;
     flex-direction: column;
     align-content: center;
+    margin-right: 5rem;
 
     #display {
         font-size: 60px;
         margin: 0px;
+        @media screen and (max-width: $breakpoint-mobile) {
+            font-size: 40px;
+            letter-spacing: 5px;
+        }
+    }
+    @media screen and (max-width: $breakpoint-mobile) {
+        text-align: center;
+        margin-top: 3rem;
+        margin-right: 0rem;
     }
 }
 
@@ -181,7 +202,7 @@ img {
 
 /* skills section */
 .skills {
-    background-color: #F6E8C6;
+    background-color: #FBF6E8;
     text-align: center;
     padding: 20px 40px;
 }
@@ -195,6 +216,9 @@ img {
     margin: 0 auto;
     position: relative;
     justify-content: space-evenly;
+    @media screen and (max-width: $breakpoint-mobile) {
+        flex-direction: column;
+    }
 }
 
 .skills-item {
@@ -218,6 +242,11 @@ img {
     left: 20%;
     top: 20%;
     z-index: 100;
+    @media screen and (max-width: $breakpoint-mobile) {
+        position: relative;
+        left: 8%;
+        top: 10%;
+    }
 }
 
 .pink-circle {
@@ -242,6 +271,17 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    h4 {
+        margin-bottom: 0px;
+    }
+
+    p {
+        @media screen and (max-width: $breakpoint-mobile) {
+            margin: 0em 8em;
+            text-align: center;
+        }
+    }
 }
 
 footer ul {
@@ -259,7 +299,6 @@ footer ul {
     font-size: 80px;
     font-weight: 500;
     letter-spacing: 10px;
-    line-height: 1.6;
 }
 
 h1 {
@@ -348,3 +387,7 @@ h4 {
     padding: 5px;
     font-size: 14px;
 }
+
+
+
+/* animations */
